@@ -2,20 +2,20 @@ import React from "react";
 import Link from "next/link";
 function Navbar() {
   return (
-    <nav className="flex justify-around p-4 bg-[#292c2e]">
+    <nav className="flex justify-around p-4 bg-[#292c2e] max-sm:hidden">
       <div>
         <h1 className="text-3xl p-4">Grupo Noa</h1>
       </div>
-      <div className="bg-red-300 flex justify-around  ">
-        <ul className=" flex ">
+      <div className="flex justify-around  ">
+        <ul className=" flex  text-lg">
           <Link className="p-4 " href="/">
             Home
           </Link>
-          <Link className="p-4" href="#Contact">
-            Contactanos
+          <Link className="p-4" href="/Products">
+            Productos
           </Link>
-          <Link className="p-4" href="/">
-            Home
+          <Link className="p-4" href="/Contact">
+            Contactanos
           </Link>
           <Link className="p-4" href="/ ">
             Contactanos

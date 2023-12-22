@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="flex flex-wrap items-center justify-between mx-auto px-8 py-9 sm:justify-center ">
         <Link
           href={"/"}
-          className="text-2xl md:text-4xl text-white font-semibold  sm:hidden"
+          className="text-2xl md:text-4xl text-white font-semibold sm:hidden"
         >
           Grupo Noa
         </Link>

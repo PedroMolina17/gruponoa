@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import MenuOverlay from "../components/MenuOverlay";
-
+import Footer from "../components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -17,6 +17,7 @@ export default function RootLayout({ children }) {
         <MenuOverlay />
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

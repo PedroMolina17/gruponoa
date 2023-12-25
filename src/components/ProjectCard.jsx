@@ -1,0 +1,18 @@
+import React from "react";
+
+const ProjectCard = ({ imgUrl, title, price }) => {
+  return (
+    <div>
+      <div
+        className="h-52 md:h-72"
+        style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
+      ></div>
+      <div>
+        <h5>{title}</h5>
+        <p>{price}</p>
+      </div>
+    </div>
+  );
+};
+
+export default ProjectCard;

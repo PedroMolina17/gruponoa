@@ -30,6 +30,7 @@ class Home extends React.Component {
             showFullscreenButton={false}
             showPlayButton={false}
             showBullets={true}
+            priority={true}
           />
         </div>
         <div className="bg-[#363636]  flex flex-col justify-center items-center  py-8 ">

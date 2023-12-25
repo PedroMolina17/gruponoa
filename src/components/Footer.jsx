@@ -11,7 +11,7 @@ import {
 function Footer() {
   return (
     <main>
-      <div className=" flex items-center justify-center max-sm:flex-col my-8 ">
+      <div className=" flex items-center justify-center max-md:flex-col my-8 ">
         <div className="sm:mr-16 mt-4">
           <p className="text-center">INFORMACIÓN</p>
           <a

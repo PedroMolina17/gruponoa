@@ -43,15 +43,18 @@ const productData = [
 function Products() {
   return (
     <>
-      <div className="grid md:grid-cols-4 gap-8 md:gap-12 p-8 ">
-        {productData.map((product) => (
-          <ProjectCard
-            key={product.id}
-            title={product.title}
-            price={product.price}
-            imgUrl={product.imgUrl}
-          ></ProjectCard>
-        ))}
+      <div className="grid grid-cols-5 ">
+        <div className="col-span-1"></div>
+        <div className="grid md:grid-cols-4 gap-8 md:gap-12 p-8  col-span-4">
+          {productData.map((product) => (
+            <ProjectCard
+              key={product.id}
+              title={product.title}
+              price={product.price}
+              imgUrl={product.imgUrl}
+            ></ProjectCard>
+          ))}
+        </div>
       </div>
     </>
   );

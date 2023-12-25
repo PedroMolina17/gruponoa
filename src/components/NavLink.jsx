@@ -8,10 +8,10 @@ const NavLink = ({ href, title }) => {
     <Link
       href={href}
       className={`link ${
-        pathname === href ? "active" : ""
-      } block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-base rounded md:p-0 hover:text-white`}
+        pathname === href ? "active" : "white font-bold"
+      } block py-2 max-md:py-1 pl-3 pr-4 text-[#ADB7BE] sm:text-base rounded md:p-0 hover:text-white`}
       style={{
-        borderBottom: pathname === href ? "2px solid #f9eb37" : "none",
+        borderBottom: pathname === href ? "2px solid #f9eb37 " : "none",
         borderRadius: 0,
       }}
     >

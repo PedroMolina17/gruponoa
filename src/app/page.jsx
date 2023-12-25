@@ -22,7 +22,7 @@ class Home extends React.Component {
   render() {
     return (
       <main>
-        <div>
+        <div className="max-sm:py-4">
           <ImageGallery
             items={images}
             showThumbnails={false}

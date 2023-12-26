@@ -8,8 +8,8 @@ import Image from "next/image";
 
 const navLinks = [
   { title: "HOME", path: "/" },
-  { title: "CONTACT", path: "/contact" },
-  { title: "PRODUCTS", path: "/products" },
+  { title: "CONTACTO", path: "/contact" },
+  { title: "PRODUCTOS", path: "/products" },
 ];
 
 const Navbar = () => {

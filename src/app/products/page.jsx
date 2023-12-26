@@ -43,9 +43,9 @@ const productData = [
 function Products() {
   return (
     <>
-      <div className="md:grid md:grid-cols-5 ">
+      <div className="md:grid md:grid-cols-5  bg-white opacity-90">
         <div className="col-span-1"></div>
-        <div className="grid md:grid-cols-4 gap-8 md:gap-12 p-8  col-span-4">
+        <div className="grid md:grid-cols-3 gap-8 md:gap-12 p-8  col-span-4">
           {productData.map((product) => (
             <ProjectCard
               key={product.id}

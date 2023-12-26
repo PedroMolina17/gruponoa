@@ -4,6 +4,7 @@ import Link from "next/link";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
+import Image from "next/image";
 
 const navLinks = [
   { title: "HOME", path: "/" },
@@ -15,13 +16,14 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
     <nav className="  mx-auto border border-[#33353F] top-0 right-0 left-0 bg-[#363636] bg-opacity-100">
-      <div className="flex flex-wrap items-center justify-between mx-auto px-8 py-9 sm:justify-center ">
-        <Link
+      <div className="flex flex-wrap items-center justify-between mx-auto px-8 py-9  ">
+        <Image
+          src="/img/LOGO.png"
           href={"/"}
-          className="text-2xl md:text-4xl text-white font-semibold sm:hidden"
-        >
-          Grupo Noa
-        </Link>
+          width={100}
+          height={100}
+          alt="da"
+        ></Image>
         {/** Menu Overlay */}
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import {
   RiWhatsappLine,
   RiMailAddLine,
@@ -11,7 +12,13 @@ import {
 function Footer() {
   return (
     <main>
-      <div className=" flex items-center justify-center max-md:flex-col my-8 ">
+      <div className=" flex items-center justify-center max-md:flex-col my-8 gap-x-32 gap-y-4 ">
+        <Image
+          src="/img/LOGO2.png"
+          width={120}
+          height={120}
+          className=" text-center"
+        ></Image>
         <div className="sm:mr-16 mt-4">
           <p className="text-center">INFORMACIÓN</p>
           <a
@@ -85,13 +92,13 @@ function Footer() {
         </div>
       </div>
       <div className="flex justify-around item-center max-sm:flex-col">
-        <div className="text-center">
+        <div className="text-center py-3">
           <p>
             Copyright © 2024 | Todos los derechos reservados | Elaborado por
             GRUPO NOA
           </p>
         </div>
-        <div className="text-center">
+        <div className="text-center py-3">
           <p>
             Copyright © 2022 | Todos los derechos reservados | Elaborado por
             ALLCENTER

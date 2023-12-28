@@ -12,12 +12,13 @@ import {
 function Footer() {
   return (
     <main>
-      <div className=" flex items-center justify-center max-md:flex-col my-8 gap-x-32 gap-y-4 ">
+      <div className=" flex items-center flex-wrap justify-around max-md:flex-col my-8 gap-x-0 gap-y-4 ">
         <Image
           src="/img/LOGO2.png"
           width={120}
           height={120}
           className=" text-center"
+          alt="Grupo Noa Logo"
         ></Image>
         <div className="sm:mr-16 mt-4">
           <p className="text-center">INFORMACIÓN</p>

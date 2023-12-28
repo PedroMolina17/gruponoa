@@ -2,7 +2,7 @@ import React from "react";
 import NavLink from "./NavLink";
 function MenuOverlay({ links }) {
   return (
-    <ul className="flex flex-col  items-center ">
+    <ul className="flex flex-col py-2 items-center ">
       {links &&
         links.map((link, index) => (
           <li key={index}>

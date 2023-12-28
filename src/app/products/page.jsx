@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import ProjectCard from "../../components/ProjectCard";
+import { FaSearch } from "react-icons/fa";
+
 const productData = [
   {
     id: 1,
@@ -43,7 +45,20 @@ const productData = [
 function Products() {
   return (
     <>
-      <div className="md:grid md:grid-cols-5  bg-white opacity-90">
+      <div className="bg-white opacity-90 p-8 flex justify-center">
+        <div className="flex w-3/4  border-b text-black border-gray-300 p-2 ">
+          <input
+            type="text"
+            placeholder="Buscar..."
+            className="outline-none px-3 py-2 w-full"
+          />
+          <button className="ml-2 bg-[#f9eb37] text-black px-4 py-2 rounded">
+            <FaSearch></FaSearch>
+          </button>
+        </div>
+      </div>
+
+      <div className="md:grid md:grid-cols-5 text-black  bg-white opacity-90 ">
         <div className="col-span-1"></div>
         <div className="grid md:grid-cols-3 gap-8 md:gap-12 p-8  col-span-4">
           {productData.map((product) => (

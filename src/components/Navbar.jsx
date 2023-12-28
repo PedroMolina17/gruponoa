@@ -16,13 +16,13 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
     <nav className="  mx-auto border border-[#33353F] top-0 right-0 left-0 bg-[#363636] bg-opacity-100">
-      <div className="flex flex-wrap items-center justify-between mx-auto px-8 py-9  ">
+      <div className="flex flex-wrap items-center justify-between mx-auto px-8  py-2">
         <Image
-          src="/img/LOGO.png"
+          src="/img/LOGO2.png"
           href={"/"}
-          width={100}
-          height={100}
-          alt="da"
+          width={80}
+          height={80}
+          alt="Grupo Noa"
         ></Image>
         {/** Menu Overlay */}
         <div className="mobile-menu block md:hidden">

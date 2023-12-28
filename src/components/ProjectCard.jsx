@@ -4,7 +4,7 @@ const ProjectCard = ({ imgUrl, title, price }) => {
   return (
     <div>
       <div
-        className="h-52 md:h-72 rounded-t-xl "
+        className="h-52 md:h-72 rounded-t-xl"
         style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
       ></div>
       <div className="text-black text-center bg-[#f9eb37] rounded-b-xl">

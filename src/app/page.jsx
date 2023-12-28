@@ -2,19 +2,26 @@
 import Image from "next/image";
 import ImageGallery from "react-image-gallery";
 import React from "react";
-import "react-image-gallery/styles/css/image-gallery.css";
+import "/public/image-gallery.css";
+
 const images = [
   {
-    original: "https://picsum.photos/id/1018/1000/350/",
+    original: "https://picsum.photos/id/1018/1000/375/",
     thumbnail: "https://picsum.photos/id/1018/250/150/",
+    description:
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
   },
   {
-    original: "https://picsum.photos/id/1015/1000/350/",
+    original: "https://picsum.photos/id/1015/1000/375/",
     thumbnail: "https://picsum.photos/id/1015/250/150/",
+    description:
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
   },
   {
-    original: "https://picsum.photos/id/1019/1000/350/",
+    original: "https://picsum.photos/id/1019/1000/375/",
     thumbnail: "https://picsum.photos/id/1019/250/150/",
+    description:
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
   },
 ];
 
@@ -22,10 +29,11 @@ class Home extends React.Component {
   render() {
     return (
       <main>
-        <div className="max-sm:py-4">
+        <div className="max-sm:py-4 opacity-70">
           <ImageGallery
             items={images}
             showThumbnails={false}
+            loading="eager"
             showNav={true}
             showFullscreenButton={false}
             showPlayButton={false}

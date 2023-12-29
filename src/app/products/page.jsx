@@ -5,6 +5,8 @@ import ProjectCard from "../../components/ProjectCard";
 import { FaSearch } from "react-icons/fa";
 import { motion, useInView } from "framer-motion";
 import ProductsTag from "../../components/Productstag";
+import ImageChangeButton from "../../components/ImageChangeButton"; // Importa el nuevo componente
+
 const productData = [
   {
     id: 1,
@@ -12,6 +14,8 @@ const productData = [
     price: "S/350.00",
     extend: "1500 x 1500mm / 18 mm",
     imgUrl: "/img/bg_1.jpeg",
+    imgUrl2: "/imgb/bg_1.jpg",
+
     tag: ["office", "All"],
   },
   {
@@ -20,6 +24,9 @@ const productData = [
     price: "S/350.00",
     extend: "1500 x 1500mm / 18 mm",
     imgUrl: "/img/bg_1.jpeg",
+    imgUrl2: "/img/bg_1.jpeg",
+    imgUrl4: "/imgb/bg_1.jpg",
+
     tag: ["office", "All"],
   },
   {
@@ -28,6 +35,7 @@ const productData = [
     price: "S/350.00",
     extend: "1500 x 1500mm / 18 mm",
     imgUrl: "/img/bg_1.jpeg",
+    imgUrl2: "/img/bg_1.jpeg",
     tag: ["office", "All"],
   },
   {
@@ -36,6 +44,7 @@ const productData = [
     price: "S/350.00",
     extend: "1500 x 1500mm / 18 mm",
     imgUrl: "/img/bg_1.jpeg",
+    imgUrl2: "/img/bg_1.jpeg",
     tag: ["office", "All"],
   },
   {
@@ -44,6 +53,7 @@ const productData = [
     price: "S/350.00",
     extend: "1500 x 1500mm / 18 mm",
     imgUrl: "/img/bg_1.jpeg",
+    imgUrl2: "/img/bg_1.jpeg",
     tag: ["All", "bedroom"],
   },
   {
@@ -52,6 +62,7 @@ const productData = [
     price: "S/350.00",
     extend: "1500 x 1500mm / 18 mm",
     imgUrl: "/img/bg_1.jpeg",
+    imgUrl2: "/img/bg_1.jpeg",
     tag: ["All", "bedroom"],
   },
   {
@@ -60,6 +71,7 @@ const productData = [
     price: "S/350.00",
     extend: "1500 x 1500mm / 18 mm",
     imgUrl: "/img/bg_1.jpeg",
+    imgUrl2: "/img/bg_1.jpeg",
     tag: ["All", "organization"],
   },
   {
@@ -68,17 +80,26 @@ const productData = [
     price: "S/350.00",
     extend: "1500 x 1500mm / 18 mm",
     imgUrl: "/img/bg_1.jpeg",
+    imgUrl2: "/img/bg_1.jpeg",
+    imgUrl3: "/imgb/bg_1.jpg",
+    imgUrl4: "/imgb/bg_1.jpg",
     tag: ["All", "hall"],
   },
 ];
 
 const Products = () => {
   const [tag, setTag] = useState("All");
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   const handleTabChange = (newTag) => {
     setTag(newTag);
+  };
+
+  const handleImageChange = (index) => {
+    setCurrentImageIndex(index);
   };
 
   const filteredProjects = productData.filter((project) =>
@@ -139,6 +160,17 @@ const Products = () => {
                 isSelected={tag === "hall"}
               />
             </div>
+            <div className="flex ">
+              {[...Array(4)].map((_, index) => (
+                <ImageChangeButton
+                  key={index}
+                  index={index}
+                  currentImageIndex={currentImageIndex}
+                  onClick={handleImageChange}
+                  label={``}
+                />
+              ))}
+            </div>
           </div>
         </div>
 
@@ -159,7 +191,9 @@ const Products = () => {
                 title={project.title}
                 price={project.price}
                 extend={project.extend}
-                imgUrl={project.imgUrl}
+                imgUrl={
+                  project[`imgUrl${currentImageIndex + 1}`] || project.imgUrl
+                }
               />
             </motion.li>
           ))}

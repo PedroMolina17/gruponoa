@@ -160,6 +160,7 @@ const Products = () => {
                 isSelected={tag === "hall"}
               />
             </div>
+            <label>COLOR</label>
             <div className="flex ">
               {[...Array(4)].map((_, index) => (
                 <ImageChangeButton

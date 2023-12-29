@@ -6,7 +6,7 @@ const ProjectCard = ({ imgUrl, title, price, extend }) => {
       <div className="border-2 flex justify-center rounded-t-xl">
         <div
           className="h-52 md:h-72  border w-4/5 my-1"
-          style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
+          style={{ backgroundImage: `url(${imgUrl})`, backgroundSize: "cover" }}
         ></div>
       </div>
 

@@ -6,6 +6,7 @@ import { FaSearch } from "react-icons/fa";
 import { motion, useInView } from "framer-motion";
 import ProductsTag from "../../components/Productstag";
 import ImageChangeButton from "../../components/ImageChangeButton"; // Importa el nuevo componente
+import { FloatingWhatsApp } from "react-floating-whatsapp";
 
 const productData = [
   {
@@ -124,7 +125,6 @@ const Products = () => {
           </button>
         </div>
       </div>
-
       <div className="md:grid md:grid-cols-5 text-black  bg-white opacity-90 ">
         <div className="col-span-1 py-1 ">
           <div className="text-black flex flex-col justify-center lg:items-start  mx-9 gap-2 py-6 ">
@@ -199,7 +199,14 @@ const Products = () => {
             </motion.li>
           ))}
         </ul>
-      </div>
+      </div>{" "}
+      <FloatingWhatsApp
+        phoneNumber="+51 934629301"
+        className="text-black z-10"
+        accountName="Grupo Noa"
+        avatar="img/LOGO2.png"
+        chatMessage="¡Hola! 🤝 ¿Cómo lo podemos ayudar?"
+      />
     </section>
   );
 };

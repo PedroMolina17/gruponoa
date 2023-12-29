@@ -1,10 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { FaSearch } from "react-icons/fa";
 
-import Link from "next/link";
-import Image from "next/image";
-import { withRouter } from "next/router";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
 
 const Contact = () => {
   const [isEmailFocused, setEmailFocused] = useState(false);
@@ -189,7 +186,14 @@ const Contact = () => {
             Enviar
           </button>
         </form>
-      )}
+      )}{" "}
+      <FloatingWhatsApp
+        phoneNumber="+51 934629301"
+        className="text-black"
+        accountName="Grupo Noa"
+        avatar="img/LOGO2.png"
+        chatMessage="¡Hola! 🤝 ¿Cómo lo podemos ayudar?"
+      />
     </section>
   );
 };

@@ -54,6 +54,22 @@ const productData = [
     imgUrl: "/img/bg_1.jpeg",
     tag: ["All", "bedroom"],
   },
+  {
+    id: 7,
+    title: "Melamina 2",
+    price: "S/350.00",
+    extend: "1500 x 1500mm / 18 mm",
+    imgUrl: "/img/bg_1.jpeg",
+    tag: ["All", "organization"],
+  },
+  {
+    id: 8,
+    title: "Melamina 2",
+    price: "S/350.00",
+    extend: "1500 x 1500mm / 18 mm",
+    imgUrl: "/img/bg_1.jpeg",
+    tag: ["All", "hall"],
+  },
 ];
 
 const Products = () => {
@@ -109,6 +125,18 @@ const Products = () => {
                 description="Oficina"
                 name="office"
                 isSelected={tag === "office"}
+              />
+              <ProductsTag
+                onClick={handleTabChange}
+                description="Organización"
+                name="organization"
+                isSelected={tag === "organization"}
+              />
+              <ProductsTag
+                onClick={handleTabChange}
+                description="Sala"
+                name="hall"
+                isSelected={tag === "hall"}
               />
             </div>
           </div>

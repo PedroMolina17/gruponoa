@@ -3,7 +3,6 @@ import Image from "next/image";
 import ImageGallery from "react-image-gallery";
 import React from "react";
 import "/public/image-gallery.css";
-import { FloatingWhatsApp } from "react-floating-whatsapp";
 
 const images = [
   {
@@ -86,13 +85,6 @@ class Home extends React.Component {
             <p className="text-center ">GARANTIA</p>
           </div>
         </div>{" "}
-        <FloatingWhatsApp
-          phoneNumber="+51 934629301"
-          className="text-black "
-          accountName="Grupo Noa"
-          avatar="img/LOGO2.png"
-          chatMessage="¡Hola! 🤝 ¿Cómo lo podemos ayudar?"
-        />
       </main>
     );
   }

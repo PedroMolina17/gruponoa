@@ -1,8 +1,6 @@
 "use client";
 import React, { useState } from "react";
 
-import { FloatingWhatsApp } from "react-floating-whatsapp";
-
 const Contact = () => {
   const [isEmailFocused, setEmailFocused] = useState(false);
   const [isAsuntoFocused, setAsuntoFocused] = useState(false);
@@ -186,14 +184,7 @@ const Contact = () => {
             Enviar
           </button>
         </form>
-      )}{" "}
-      <FloatingWhatsApp
-        phoneNumber="+51 934629301"
-        className="text-black"
-        accountName="Grupo Noa"
-        avatar="img/LOGO2.png"
-        chatMessage="¡Hola! 🤝 ¿Cómo lo podemos ayudar?"
-      />
+      )}
     </section>
   );
 };

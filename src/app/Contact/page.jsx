@@ -2,17 +2,23 @@
 import React, { useState } from "react";
 
 const Contact = () => {
+  const initialFormData = {
+    email: "",
+    subject: "",
+    message: "",
+  };
   const [isEmailFocused, setEmailFocused] = useState(false);
   const [isAsuntoFocused, setAsuntoFocused] = useState(false);
   const [isJobFocused, setJobFocused] = useState(false);
-
   const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [formData, setFormData] = useState(initialFormData);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
-      email: e.target.email.value,
-      subject: e.target.subject.value,
-      message: e.target.message.value,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
     };
     const JSONdata = JSON.stringify(data);
     const endpoint = "/api/send";
@@ -28,7 +34,18 @@ const Contact = () => {
 
     if (response.status === 200) {
       setEmailSubmitted(true);
+      setFormData(initialFormData);
+    } else {
+      console.error("Error al enviar el formulario:", resData);
     }
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
   };
 
   return (
@@ -55,6 +72,8 @@ const Contact = () => {
               type="email"
               id="email"
               required
+              value={formData.email}
+              onChange={handleChange}
               className="h-14 border border-[#33353F] placeholder-[#9CA2A9] text-black text-sm rounded-lg block w-full p-2"
               placeholder="example@gmail.com"
             />
@@ -67,6 +86,8 @@ const Contact = () => {
               Subject
             </label>
             <input
+              value={formData.subject}
+              onChange={handleChange}
               name="subject"
               type="text"
               id="subject"
@@ -87,6 +108,8 @@ const Contact = () => {
               id="message"
               className="h-36 border border-[#363636] placeholder-[#9CA2A9] text-black text-sm rounded-lg block w-full p-2"
               placeholder="Let's talk about..."
+              value={formData.message}
+              onChange={handleChange}
             ></textarea>
           </div>
           <button
@@ -109,6 +132,8 @@ const Contact = () => {
               Your Email
             </label>
             <input
+              value={formData.email}
+              onChange={handleChange}
               name="email"
               type="email"
               id="email"
@@ -133,6 +158,8 @@ const Contact = () => {
               Subject
             </label>
             <input
+              onChange={handleChange}
+              value={formData.subject}
               name="subject"
               type="text"
               id="subject"
@@ -160,6 +187,8 @@ const Contact = () => {
               Message
             </label>
             <textarea
+              value={formData.message}
+              onChange={handleChange}
               name="message"
               id="message"
               className="h-36 border border-[#363636] placeholder-[#9CA2A9] text-black text-sm rounded-lg block w-full p-2"

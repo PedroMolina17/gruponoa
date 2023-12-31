@@ -4,13 +4,13 @@ function ImageChangeButton({ index, currentImageIndex, onClick, label }) {
   const getButtonColor = (buttonIndex) => {
     switch (buttonIndex) {
       case 0:
-        return "bg-red-500 h-10 w-10";
+        return "bg-[#6b5a55] h-10 w-10";
       case 1:
-        return "bg-[#faed4b] h-10 w-10";
+        return "bg-[#8f8d8b] h-10 w-10";
       case 2:
-        return "bg-green-100 h-10 w-10";
+        return "bg-[#ffe1bb] h-10 w-10";
       case 3:
-        return "bg-green-500 h-10 w-10";
+        return "bg-[#735745] h-10 w-10";
       default:
         return "";
     }

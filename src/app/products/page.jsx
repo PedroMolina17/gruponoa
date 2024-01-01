@@ -36,8 +36,10 @@ const productData = [
     title: "Melamina 2",
     price: "S/350.00",
     extend: "1500 x 1500mm / 18 mm",
-    imgUrl: "/img/bg_1.jpeg",
-    imgUrl2: "/img/bg_1.jpeg",
+    imgUrl: "/img/Modelow2_1.png",
+    imgUrl2: "/imgb/Modelow2_2.png",
+    imgUrl3: "/imgr/Modelow2_3.png",
+    imgUrl4: "/imgy/Modelo2_4.png",
     tag: ["office", "All"],
   },
   {

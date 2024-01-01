@@ -6,13 +6,13 @@ import "/public/image-gallery.css";
 
 const images = [
   {
-    original: "https://picsum.photos/id/1018/1000/375/",
+    original: "/Portada/portada_8.jpg",
     thumbnail: "https://picsum.photos/id/1018/250/150/",
     description:
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
   },
   {
-    original: "https://picsum.photos/id/1015/1000/375/",
+    original: "/Portada/portada_5.jpg",
     thumbnail: "https://picsum.photos/id/1015/250/150/",
     description:
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
@@ -31,6 +31,8 @@ class Home extends React.Component {
       <main>
         <div className="max-sm:py-4 opacity-70">
           <ImageGallery
+            style={{ height: "80px" }}
+            originalHeight={80}
             items={images}
             showThumbnails={false}
             loading="eager"

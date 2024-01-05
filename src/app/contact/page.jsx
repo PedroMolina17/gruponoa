@@ -50,7 +50,7 @@ const Contact = () => {
 
   return (
     <section
-      className="grid md:grid-cols-1 gap-4 relative px-24 py-8 bg-white opacity-90 "
+      className="grid md:grid-cols-1 gap-4 relative px-24 py-8 bg-white "
       id="contact"
     >
       <div>

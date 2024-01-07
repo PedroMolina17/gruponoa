@@ -14,7 +14,7 @@ function Footer() {
     <main>
       <div className=" flex items-center flex-wrap justify-around max-md:flex-col my-8 gap-x-0 gap-y-4 ">
         <Image
-          src="/img/LOGO2.png"
+          src="/img/LOGO_WALTER-gradient.png"
           width={120}
           height={120}
           className=" text-center"

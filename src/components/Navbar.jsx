@@ -19,7 +19,7 @@ const Navbar = () => {
     <nav className="  mx-auto border border-[#33353F] top-0 right-0 left-0 bg-[#363636] bg-opacity-100">
       <div className="flex flex-wrap items-center justify-between mx-auto px-8  py-2">
         <Image
-          src="/img/LOGO2.png"
+          src="/img/LOGO_WALTER-gradient.png"
           href={"/"}
           width={80}
           height={80}

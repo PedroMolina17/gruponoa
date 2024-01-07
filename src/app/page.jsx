@@ -29,7 +29,7 @@ class Home extends React.Component {
   render() {
     return (
       <main>
-        <div className="max-sm:py-4 opacity-70">
+        <div className="max-sm:py-4 opacity-80">
           <ImageGallery
             style={{ height: "80px" }}
             originalHeight={80}

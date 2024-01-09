@@ -4,7 +4,7 @@ import ImageGallery from "react-image-gallery";
 import React from "react";
 import "/public/image-gallery.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-
+import Link from "next/link";
 const images = [
   {
     original: "/Portada/portada_8.jpg",
@@ -30,55 +30,28 @@ class Home extends React.Component {
   render() {
     return (
       <>
-        <section className="relative">
-          <div className="h-auto   w-full bg-gray-200  relative">
-            <ul>
-              <li className="relative">
-                <Image
-                  src="/img/slider_1.jpg"
-                  alt="Grupo Noa"
-                  width="0"
-                  height="0"
-                  sizes="100vh"
-                  style={{
-                    objectFit: "cover",
-                    objectPosition: "center",
-                    layout: "fill",
-                    width: "100%",
-                    height: "100%",
-                  }}
-                  priority="true"
-                ></Image>
-              </li>
-            </ul>
-
-            <div className="absolute px-5 flex h-full w-full top-0 left-0 ">
-              <div className=" w-full flex justify-between ">
-                <button className="bg-white p-3 rounded-full opacity-40 shadow-lg text-black my-auto">
-                  <FaArrowLeft />
-                </button>
-                <div className="w-1/2 "></div>
-                <div className=" top-0 left-0 h-full w-1/2 flex mx-auto   ">
-                  <div className="my-auto  mx-auto">
-                    <h1 className="text-4xl font-bold text-[#f9eb37]">
-                      CONTACTANOS
-                    </h1>
-                    <h1>
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Reprehenderit, consequatur.
-                    </h1>
-                    <button className="bg-[#f9eb37] text-black p-2 px-6 rounded-lg text-lg ">
-                      Catálogo
-                    </button>
-                  </div>
-                </div>
-                <button className="bg-white p-3 rounded-full opacity-40 shadow-lg text-black  my-auto">
-                  <FaArrowRight />
-                </button>
-              </div>
+        <div className="max-sm:py-4 relative">
+          <ImageGallery
+            style={{ height: "80px" }}
+            originalHeight={80}
+            items={images}
+            showThumbnails={false}
+            loading="eager"
+            showNav={true}
+            showFullscreenButton={false}
+            showPlayButton={false}
+            showBullets={true}
+            priority={true}
+          />
+          <div className="w-full flex justify-center items-center">
+            <div className="absolute  top-1/3 flex flex-col  mx-auto justify-center">
+              <p className="text-xl text-[#f9eb37] font-bold">PRODUCTOS</p>
+              <button className="text-2xl text-[#363636] font-bold bg-[#f9eb37] px-7 py-3 rounded-xl">
+                <Link href="/products/">CATALOGO</Link>
+              </button>
             </div>
           </div>
-        </section>
+        </div>
 
         <main>
           <div className="bg-[#363636]  flex flex-col justify-center items-center  py-8 ">

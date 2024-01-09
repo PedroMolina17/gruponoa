@@ -6,14 +6,14 @@ import { FaSearch } from "react-icons/fa";
 import { motion, useInView } from "framer-motion";
 import ProductsTag from "../../components/Productstag";
 import ImageChangeButton from "../../components/ImageChangeButton"; // Importa el nuevo componente
-
+import Link from "next/link";
 const productData = [
   {
     id: 1,
-    title: "Melamina 1",
-    price: "S/350.00",
+    title: "Mesa de centro",
+    price: "S/399.00",
     extend: "1500 x 1500mm / 18 mm",
-    imgUrl: "/img/Modelow_1.png",
+    imgUrl: "/img/product_1.jpg",
     imgUrl2: "/imgb/Modelow_2.png",
     imgUrl3: "/imgr/Modelow_3.png",
     imgUrl4: "/imgy/Modelow_4.png",
@@ -25,7 +25,7 @@ const productData = [
     title: "Melamina 2",
     price: "S/350.00",
     extend: "1500 x 1500mm / 18 mm",
-    imgUrl: "/img/bg_1.jpeg",
+    imgUrl: "/img/product_2m.jpg",
     imgUrl2: "/img/bg_1.jpeg",
     imgUrl4: "/imgb/bg_1.jpg",
 
@@ -191,10 +191,9 @@ const Products = () => {
               transition={{ duration: 0.3, delay: index * 0.2 }}
             >
               <ProjectCard
-                key={project.id}
+                id={project.id}
                 title={project.title}
                 price={project.price}
-                extend={project.extend}
                 imgUrl={
                   project[`imgUrl${currentImageIndex + 1}`] || project.imgUrl
                 }

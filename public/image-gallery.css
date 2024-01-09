@@ -134,7 +134,9 @@
 }
 .image-gallery-content .image-gallery-slide .image-gallery-image {
   max-height: calc(100vh - 80px);
+  opacity: 0.5; /* Ajusta este valor según tus preferencias */
 }
+
 .image-gallery-content.image-gallery-thumbnails-left
   .image-gallery-slide
   .image-gallery-image,
@@ -398,6 +400,7 @@
   text-shadow: 0 2px 2px #1a1a1a;
   transform: translateY(-50%);
   white-space: normal;
+
   width: 100%;
 }
 @media (max-width: 768px) {

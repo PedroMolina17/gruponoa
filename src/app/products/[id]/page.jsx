@@ -6,9 +6,8 @@ import Link from "next/link";
 const Page = ({ params }) => {
   const handleWhatsAppClick = () => {
     const phoneNumber = "955438535"; // Reemplaza esto con el número de teléfono al que deseas enviar el mensaje
-    const message =
-      "¡Hola! Estoy interesado en este producto: [Inserta el enlace del producto aquí]";
-
+    const message = `¡Hola! Estoy interesado en este producto:  ${window.location.origin}/products/${params.id}`;
+    console.log(message);
     // Codificar el número de teléfono y el mensaje para el enlace de WhatsApp
     const encodedPhoneNumber = encodeURIComponent(phoneNumber);
     const encodedMessage = encodeURIComponent(message);

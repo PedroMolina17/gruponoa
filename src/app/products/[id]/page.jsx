@@ -9,9 +9,9 @@ const Page = ({ params }) => {
   );
 
   return (
-    <div className="bg-white text-black grid grid-cols-2 px-3 py-14 gap-lg-0">
+    <div className="bg-white text-black grid grid-cols-2 px-3 py-14 gap-lg-0 max-sm:grid-cols-1">
       {" "}
-      <div className="col-span-1 flex flex-col items-center justify-center">
+      <div className="col-span-1 flex flex-col items-center justify-center ">
         <h1 className="text-2xl font-bold text-[#363636]">
           <Link href="/products" className="">
             Productos
@@ -24,7 +24,7 @@ const Page = ({ params }) => {
         <h1 className="font-bold text-[#363636] text-4xl">
           {productData.title}
         </h1>
-        <div className="mr-80 py-3">
+        <div className="mr-80 py-3 max-sm:mr-0 ">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
             beatae sunt rem. Hic tenetur provident reiciendis quae quis delectus

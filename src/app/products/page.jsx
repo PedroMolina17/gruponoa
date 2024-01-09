@@ -22,7 +22,7 @@ const productData = [
   },
   {
     id: 2,
-    title: "Melamina 2",
+    title: "Mesa de trabajo",
     price: "S/350.00",
     extend: "1500 x 1500mm / 18 mm",
     imgUrl: "/img/product_2m.jpg",

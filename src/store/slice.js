@@ -11,7 +11,6 @@ const initialState = {
       imgUrl2: "/imgb/Modelow_2.png",
       imgUrl3: "/imgr/Modelow_3.png",
       imgUrl4: "/imgy/Modelow_4.png",
-
       tag: ["office", "All"],
     },
     {

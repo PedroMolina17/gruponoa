@@ -57,7 +57,7 @@ const Navbar = () => {
           phoneNumber="+51 934629301"
           className="text-black"
           accountName="Grupo Noa"
-          avatar="img/LOGO2.png"
+          avatar="/img/LOGO2.png"
           chatMessage="¡Hola! 🤝 ¿Cómo lo podemos ayudar?"
         />
       </div>

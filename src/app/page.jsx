@@ -4,6 +4,8 @@ import ImageGallery from "react-image-gallery";
 import React from "react";
 import "/public/image-gallery.css";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+
 const images = [
   {
     id: 1,
@@ -35,6 +37,26 @@ const images = [
 ];
 
 class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isSmallScreen: false,
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener("resize", this.handleResize);
+    this.handleResize();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.handleResize);
+  }
+
+  handleResize = () => {
+    this.setState({ isSmallScreen: window.innerWidth <= 768 });
+  };
+
   render() {
     return (
       <>
@@ -48,7 +70,7 @@ class Home extends React.Component {
             showNav={true}
             showFullscreenButton={false}
             showPlayButton={false}
-            showBullets={true}
+            showBullets={!this.state.isSmallScreen}
             priority={true}
             autoPlay={true}
             renderItem={(item) => (

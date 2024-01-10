@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import {
@@ -8,10 +9,20 @@ import {
   RiTiktokFill,
   RiInstagramFill,
 } from "react-icons/ri";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
 
 function Footer() {
   return (
     <main>
+      {" "}
+      <FloatingWhatsApp
+        phoneNumber="+51 934629301"
+        className="text-black"
+        accountName="Grupo Noa"
+        avatar="/img/LOGO2.png"
+        chatMessage="¡Hola! 🤝 ¿Cómo lo podemos ayudar?"
+        priority="true"
+      />
       <div className=" flex items-center flex-wrap justify-around max-md:flex-col my-8 gap-x-0 gap-y-4 ">
         <Image
           src="/img/LOGO_WALTER-gradient.png"
@@ -81,7 +92,7 @@ function Footer() {
           </a>
           <a className="flex justify-start items-center pt-0 ">
             <RiTiktokFill style={{ width: 30, height: 30 }} className="pr-1" />
-            pedro.molinanoa@gmail.com
+            Vidrieria y Muebleria Noa{" "}
           </a>
           <a className="flex justify-start items-center pt-0 ">
             <RiInstagramFill

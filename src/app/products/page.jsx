@@ -5,7 +5,7 @@ import ProjectCard from "../../components/ProjectCard";
 import { FaSearch } from "react-icons/fa";
 import { motion, useInView } from "framer-motion";
 import ProductsTag from "../../components/Productstag";
-import ImageChangeButton from "../../components/ImageChangeButton"; // Importa el nuevo componente
+import ImageChangeButton from "../../components/ImageChangeButton";
 import Link from "next/link";
 import { useSelector } from "react-redux";
 

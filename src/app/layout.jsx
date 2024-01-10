@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <Head>
-        <link rel="icon" href="/../img/favicon.ico" />
+        <link rel="icon" href="/img/LOGO_WALTER-gradient.png" />
       </Head>
       <Providers>
         <body className={inter.className}>

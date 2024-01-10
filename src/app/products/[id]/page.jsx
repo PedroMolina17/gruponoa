@@ -3,19 +3,18 @@ import React from "react";
 import Image from "next/image";
 import { useSelector } from "react-redux";
 import Link from "next/link";
+import { FaArrowLeft } from "react-icons/fa6";
+
 const Page = ({ params }) => {
   const handleWhatsAppClick = () => {
-    const phoneNumber = "955438535"; // Reemplaza esto con el número de teléfono al que deseas enviar el mensaje
-    const message = `¡Hola! Estoy interesado en este producto:  ${window.location.origin}/products/${params.id}`;
+    const phoneNumber = "955438535";
+    const message = `¡Hola! Estoy interesado(a) en este producto:  ${window.location.origin}/products/${params.id}`;
     console.log(message);
-    // Codificar el número de teléfono y el mensaje para el enlace de WhatsApp
     const encodedPhoneNumber = encodeURIComponent(phoneNumber);
     const encodedMessage = encodeURIComponent(message);
 
-    // Crear el enlace de WhatsApp
     const whatsappLink = `https://wa.me/${encodedPhoneNumber}?text=${encodedMessage}`;
 
-    // Abrir el enlace en una nueva pestaña
     window.open(whatsappLink, "_blank");
   };
 
@@ -28,8 +27,8 @@ const Page = ({ params }) => {
       {" "}
       <div className="col-span-1 flex flex-col items-center justify-center ">
         <h1 className="text-2xl font-bold ">
-          <Link href="/products" className="text-[#363636]">
-            Productos
+          <Link href="/products" className="text-[#363636] ">
+            <FaArrowLeft className="inline text-2xl " /> Productos
           </Link>
           <p className="text-[#363636] opacity-60 inline">
             /{productData.title}
@@ -48,6 +47,14 @@ const Page = ({ params }) => {
             perferendis ea, molestias iure aliquid blanditiis velit optio odio
             recusandae assumenda.
           </p>
+          Recomendaciones de uso:
+          <ul className="list-disc">
+            <li className=""> Limpiar con un trapo seco o húmedo.</li>
+            <li className="list-disc">
+              No es necesario el uso deabrillantador y/o cera para su
+              mantenimiento.
+            </li>
+          </ul>
           <h1 className="py-5 font-bold text-[#363636]">{productData.price}</h1>
           <button
             className="py-3 px-14 bg-[#f9eb37] rounded-lg font-bold text-[#363636]"

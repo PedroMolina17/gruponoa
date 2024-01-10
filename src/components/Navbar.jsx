@@ -5,7 +5,6 @@ import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
 import Image from "next/image";
-import { FloatingWhatsApp } from "react-floating-whatsapp";
 
 const navLinks = [
   { title: "HOME", path: "/" },
@@ -24,6 +23,7 @@ const Navbar = () => {
           width={80}
           height={80}
           alt="Grupo Noa"
+          priority="true"
         ></Image>
         {/** Menu Overlay */}
         <div className="mobile-menu block md:hidden">
@@ -53,13 +53,6 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <FloatingWhatsApp
-          phoneNumber="+51 934629301"
-          className="text-black"
-          accountName="Grupo Noa"
-          avatar="/img/LOGO2.png"
-          chatMessage="¡Hola! 🤝 ¿Cómo lo podemos ayudar?"
-        />
       </div>
       {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
     </nav>

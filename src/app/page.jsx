@@ -3,26 +3,34 @@ import Image from "next/image";
 import ImageGallery from "react-image-gallery";
 import React from "react";
 import "/public/image-gallery.css";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
 const images = [
   {
+    id: 1,
     original: "/Portada/portada_8.jpg",
     thumbnail: "https://picsum.photos/id/1018/250/150/",
     description:
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    button: { label: "Ver Detalles", link: "/products" },
+    title: "GRUPO NOA",
   },
   {
+    id: 2,
     original: "/Portada/portada_5.jpg",
     thumbnail: "https://picsum.photos/id/1015/250/150/",
     description:
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    title: "GRUPO NOA",
+    button: { label: "Ver Detalles", link: "/products" },
   },
   {
-    original: "https://picsum.photos/id/1019/1000/375/",
+    id: 3,
+    original: "/Portada/portada_5.jpg",
     thumbnail: "https://picsum.photos/id/1019/250/150/",
     description:
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    button: { label: "Ver Detalles", link: "/products" },
+    title: "GRUPO NOA",
   },
 ];
 
@@ -42,15 +50,40 @@ class Home extends React.Component {
             showPlayButton={false}
             showBullets={true}
             priority={true}
+            autoPlay={true}
+            renderItem={(item) => (
+              <div className="image-gallery-item">
+                <div className="image-gallery-image">
+                  <Image
+                    src={item.original}
+                    alt={item.description}
+                    width={2500}
+                    height={375}
+                    className="max-sm:h-1000"
+                  />
+                </div>
+                {item.description && (
+                  <div
+                    className={`image-gallery-description ${
+                      item.id === 2 ? "special-slide" : ""
+                    }`}
+                    style={item.id === 2 ? { left: "20%" } : {}}
+                  >
+                    <h1 className="text-4xl max-md:text-xl text-[#f9eb37] font-bold">
+                      {item.title}
+                    </h1>
+                    <p className="py-5 max-sm:py-1">{item.description}</p>
+                    <button
+                      className="text-2xl text-[#363636] font-bold bg-[#f9eb37] px-7 py-3 rounded-xl  max-sm:px-1 max-sm:py-1 max-sm:text-sm"
+                      onClick={() => (window.location.href = item.button.link)}
+                    >
+                      {item.button.label}
+                    </button>
+                  </div>
+                )}
+              </div>
+            )}
           />
-          <div className="w-full flex justify-center items-center">
-            <div className="absolute  top-1/3 flex flex-col  mx-auto justify-center">
-              <p className="text-xl text-[#f9eb37] font-bold">PRODUCTOS</p>
-              <button className="text-2xl text-[#363636] font-bold bg-[#f9eb37] px-7 py-3 rounded-xl">
-                <Link href="/products/">CATALOGO</Link>
-              </button>
-            </div>
-          </div>
         </div>
 
         <main>

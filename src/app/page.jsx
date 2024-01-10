@@ -19,8 +19,8 @@ const images = [
     original: "/Portada/portada_5.jpg",
     thumbnail: "https://picsum.photos/id/1015/250/150/",
     description:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-    title: "GRUPO NOA",
+      "Hacemos realidad toda clase de proyectos para tu hogar o negocio, como baños, cocinas, dormitorios, estudios, oficinas y más.  ",
+    title: "DISEÑA TU ESPACIO",
     button: { label: "Ver Detalles", link: "/products" },
   },
   {
@@ -72,12 +72,12 @@ class Home extends React.Component {
                     <h1 className="text-4xl max-md:text-xl text-[#f9eb37] font-bold">
                       {item.title}
                     </h1>
-                    <p className="py-5 max-sm:py-1">{item.description}</p>
-                    <button
-                      className="text-2xl text-[#363636] font-bold bg-[#f9eb37] px-7 py-3 rounded-xl  max-sm:px-1 max-sm:py-1 max-sm:text-sm"
-                      onClick={() => (window.location.href = item.button.link)}
-                    >
-                      {item.button.label}
+                    <p className="py-2  max-md:my-0 md:text-lg max-sm:py-1 max-md:text-xs md:w-80 w-full">
+                      {item.description}
+                    </p>
+                    <button className="text-2xl text-[#363636] font-bold bg-[#f9eb37] px-7 py-3 rounded-xl  max-md:px-1 max-md:py-1 max-md:text-sm">
+                      {" "}
+                      <Link href={item.button.link}>{item.button.label}</Link>
                     </button>
                   </div>
                 )}

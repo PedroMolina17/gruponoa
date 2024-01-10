@@ -50,7 +50,7 @@ const Contact = () => {
 
   return (
     <section
-      className="grid md:grid-cols-1 gap-4 relative px-24 py-8 bg-white "
+      className="grid md:grid-cols-1 gap-4 relative px-24 py-8 bg-white place-items-center"
       id="contact"
     >
       <div>
@@ -59,7 +59,7 @@ const Contact = () => {
         </h5>
       </div>
       {emailSubmitted ? (
-        <form className="flex flex-col md:px-80 " onSubmit={handleSubmit}>
+        <form className="flex flex-col  md:w-2/3" onSubmit={handleSubmit}>
           <div className="mb-6">
             <label
               htmlFor="email"
@@ -123,7 +123,7 @@ const Contact = () => {
           </p>
         </form>
       ) : (
-        <form className="flex flex-col md:px-80 " onSubmit={handleSubmit}>
+        <form className="flex flex-col md:w-2/3 " onSubmit={handleSubmit}>
           <div className="mb-6">
             <label
               htmlFor="email"

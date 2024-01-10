@@ -189,12 +189,19 @@
   line-height: 1;
   padding: 10px 20px;
   position: absolute;
-  white-space: normal;
+  white-space: wrap;
   transform: translateX(-50%);
 }
+@media (max-width: 768px) {
+  .image-gallery-slide .image-gallery-description {
+    width: 100%;
+    top: 0;
+  }
+}
+
 @media (min-width: 769px) {
   .image-gallery-slide.special-slide .image-gallery-description {
-    left: 20% !important; /* Agrega !important para asegurarte de que la regla se aplique */
+    left: 20% !important;
   }
 }
 

@@ -53,14 +53,14 @@ const Contact = () => {
       className="grid md:grid-cols-1 gap-4 relative px-24 py-8 bg-white place-items-center"
       id="contact"
     >
-      <div>
-        <h5 className="text-4xl font-bold text-[#33353F] my-2 text-center">
+      <div className="flex">
+        <h5 className="text-4xl font-bold text-[#33353F] my-2 ">
           Contactanos{" "}
         </h5>
       </div>
       {emailSubmitted ? (
-        <form className="flex flex-col  md:w-2/3" onSubmit={handleSubmit}>
-          <div className="mb-6">
+        <form className="flex flex-col md:w-2/3 " onSubmit={handleSubmit}>
+          <div className="mb-6 ">
             <label
               htmlFor="email"
               className="text-black block mb-2 text-sm font-medium"

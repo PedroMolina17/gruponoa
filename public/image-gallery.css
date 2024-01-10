@@ -195,7 +195,7 @@
 @media (max-width: 768px) {
   .image-gallery-slide .image-gallery-description {
     width: 100%;
-    top: 0;
+    top: 1px;
   }
 }
 
@@ -240,15 +240,16 @@
 }
 .image-gallery-bullets .image-gallery-bullet {
   appearance: none;
-  background-color: transparent;
+  background-color: #cccccc;
   border: 1px solid #fff;
-  border-radius: 50%;
+  border-radius: 1rem;
   box-shadow: 0 2px 2px #1a1a1a;
+  width: 25px;
   cursor: pointer;
   display: inline-block;
   margin: 0 5px;
   outline: none;
-  padding: 5px;
+  padding: 3px;
   transition: all 0.2s ease-out;
 }
 @media (max-width: 768px) {
